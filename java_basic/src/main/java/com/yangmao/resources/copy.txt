@@ -1,0 +1,49 @@
+package com.study.file;
+
+import java.io.*;
+
+/**
+ * 文件输入输出结合起来，完成复制的功能
+ */
+public class CopyFile {
+
+    public static void main(String[] args) {
+        copy("src/com/study/file/CopyFile.java", "copy.txt");
+    }
+
+    public static void copy(String srcPath, String destPath) {
+        File srcFile = new File(srcPath);
+        File destFile = new File(destPath);
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = new FileInputStream(srcFile);
+            os = new FileOutputStream(destFile, false);
+            byte[] flush = new byte[1024];
+            int len = -1;
+            while ((len = is.read(flush)) != -1) {
+                os.write(flush, 0, len);
+            }
+            os.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (os != null) {
+                try {
+                    os.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
