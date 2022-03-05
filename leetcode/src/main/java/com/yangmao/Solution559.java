@@ -1,6 +1,7 @@
 package com.yangmao;
 
-import com.yangming.leetcode.node.Node;
+
+import com.yangmao.node.Node;
 
 import java.util.List;
 

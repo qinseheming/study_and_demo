@@ -1,6 +1,7 @@
 package com.yangmao;
 
-import com.yangming.leetcode.util.PrintUtil;
+
+import com.yangmao.util.PrintUtil;
 
 /**
  * 942. 增减字符串匹配 https://leetcode-cn.com/problems/di-string-match/

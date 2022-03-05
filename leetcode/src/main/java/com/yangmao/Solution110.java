@@ -6,14 +6,14 @@ package com.yangmao;
  */
 public class Solution110 {
 
-    public boolean isBalanced(com.yangming.leetcode.TreeNode root) {
+    public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
         }
         return Math.abs(getLevel(root.left) - getLevel(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
     }
 
-    private int getLevel(com.yangming.leetcode.TreeNode treeNode) {
+    private int getLevel(TreeNode treeNode) {
         if (treeNode == null) {
             return 0;
         }else {

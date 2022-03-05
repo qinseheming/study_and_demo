@@ -1,6 +1,7 @@
 package com.yangmao.util;
 
-import com.yangming.leetcode.ListNode;
+
+import com.yangmao.ListNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,13 +19,13 @@ public class ListNodeUtil {
      * @param listNodeStr eg：a->b->c->d->e->f
      * @return 单向链表头结点
      */
-    public static com.yangming.leetcode.ListNode createListNode(String listNodeStr) {
+    public static ListNode createListNode(String listNodeStr) {
         String[] split = listNodeStr.split("->");
         List<Integer> list = Arrays.stream(split).map(Integer::parseInt).collect(Collectors.toList());
-        com.yangming.leetcode.ListNode head = new com.yangming.leetcode.ListNode(list.get(0));
-        com.yangming.leetcode.ListNode node;
+        ListNode head = new ListNode(list.get(0));
+        ListNode node;
         for (int i = 1; i < list.size(); i++) {
-            node = new com.yangming.leetcode.ListNode(list.get(i));
+            node = new ListNode(list.get(i));
             if (i == 1) {
                 head.next = node;
             }
@@ -33,7 +34,7 @@ public class ListNodeUtil {
         return head;
     }
 
-    public static void print(com.yangming.leetcode.ListNode node) {
+    public static void print(ListNode node) {
         List<Integer> list = new ArrayList<>();
         while (node != null) {
             list.add(node.val);

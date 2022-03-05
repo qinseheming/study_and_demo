@@ -10,7 +10,7 @@ import java.util.Queue;
 public class Solution933 {
 
     public static void main(String[] args) {
-        com.yangming.leetcode.RecentCounter recentCounter = new com.yangming.leetcode.RecentCounter();
+        RecentCounter recentCounter = new RecentCounter();
         int[] arr = new int[]{1, 100, 3001, 3002};
         for (int i : arr) {
             System.out.println(recentCounter.ping(i));

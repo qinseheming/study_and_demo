@@ -1,6 +1,7 @@
 package com.yangmao;
 
-import com.yangming.leetcode.util.PrintUtil;
+
+import com.yangmao.util.PrintUtil;
 
 import java.util.ArrayList;
 import java.util.List;

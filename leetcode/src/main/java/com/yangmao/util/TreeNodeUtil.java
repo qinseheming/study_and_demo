@@ -1,6 +1,7 @@
 package com.yangmao.util;
 
-import com.yangming.leetcode.TreeNode;
+
+import com.yangmao.TreeNode;
 
 import java.util.Arrays;
 import java.util.LinkedList;

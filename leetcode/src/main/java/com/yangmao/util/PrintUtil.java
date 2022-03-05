@@ -1,7 +1,8 @@
 package com.yangmao.util;
 
-import com.yangming.leetcode.ListNode;
-import com.yangming.leetcode.TreeNode;
+
+import com.yangmao.ListNode;
+import com.yangmao.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,14 +46,14 @@ public class PrintUtil {
         System.out.println(builder.toString());
     }
 
-    public static void printTree(com.yangming.leetcode.TreeNode root) {
+    public static void printTree(TreeNode root) {
         StringBuilder builder = new StringBuilder();
         builder.append("[");
         builder.append(root.val).append(",");
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            com.yangming.leetcode.TreeNode node = queue.remove();
+            TreeNode node = queue.remove();
             if (node.left != null) {
                 queue.add(node.left);
                 builder.append(node.left.val);

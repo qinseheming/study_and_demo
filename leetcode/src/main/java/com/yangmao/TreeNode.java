@@ -7,8 +7,8 @@ package com.yangmao;
 public class TreeNode {
 
     public Integer val;
-    public com.yangming.leetcode.TreeNode left;
-    public com.yangming.leetcode.TreeNode right;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(Integer x) {
         val = x;

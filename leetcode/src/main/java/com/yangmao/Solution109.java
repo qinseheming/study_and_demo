@@ -21,19 +21,19 @@ package com.yangmao;
  */
 public class Solution109 {
 
-    public com.yangming.leetcode.TreeNode sortedListToBST(ListNode head) {
+    public TreeNode sortedListToBST(ListNode head) {
         if (head == null) {
             return null;
         }
         return sortedListToBST(head, null);
     }
 
-    private com.yangming.leetcode.TreeNode sortedListToBST(ListNode left, ListNode right) {
+    private TreeNode sortedListToBST(ListNode left, ListNode right) {
         if (left == right) {
             return null;
         }
         ListNode midNode = getMid(left, right);
-        com.yangming.leetcode.TreeNode head = new com.yangming.leetcode.TreeNode(midNode.val);
+        TreeNode head = new TreeNode(midNode.val);
         head.left = sortedListToBST(left, midNode);
         head.right = sortedListToBST(midNode.next, right);
         return head;

@@ -1,6 +1,7 @@
 package com.yangmao.interview;
 
-import com.yangming.leetcode.ListNode;
+
+import com.yangmao.ListNode;
 
 /**
  * @author yangming
